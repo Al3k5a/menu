@@ -50,8 +50,9 @@ export default Vue.extend({
       if (this.$refs.loginForm.validate()) {
         try {
           await this.$auth.setUserToken("12345");
+        } finally {
           this.$router.push({ path: "/" });
-        } catch (e) {}
+        }
         // Todo implement backend strategy for nuxt auth
         // try {
         //   let response = await this.$auth.loginWith("local", {

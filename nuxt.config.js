@@ -78,7 +78,15 @@ export default {
       home: false,
     },
     strategies: {
-      local: {},
+      local: {
+        token: {
+          property: "token",
+          global: true,
+        },
+        endpoints: {
+          user: false,
+        },
+      },
     },
   },
   toast: {
