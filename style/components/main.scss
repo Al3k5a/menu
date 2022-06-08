@@ -1,0 +1,18 @@
+.brand-icon{
+    background-image: url('~/static/menu.png');
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+}
+
+.theme--light.v-data-table>.v-data-table__wrapper>table>tbody>tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+    cursor: pointer;
+}
+
+.toasted .primary,
+.toasted.toasted-primary{
+    background-color: #aaaa !important;
+    color: black !important;
+    font-family: 'Open Sans' !important;
+    font-weight: bold !important;
+}
