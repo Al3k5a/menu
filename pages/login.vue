@@ -20,7 +20,7 @@
         placeholder="Password"
       >
       </v-text-field>
-      <v-btn color="primary" width="100%" @click="login"
+      <v-btn @click.prevent="login" color="primary" width="100%"
         ><span class="text-capitalize">Sign in</span></v-btn
       >
     </v-form>
@@ -48,7 +48,10 @@ export default Vue.extend({
     async login() {
       //@ts-ignore
       if (this.$refs.loginForm.validate()) {
-        this.$auth.setUserToken("12345");
+        try {
+          await this.$auth.setUserToken("12345");
+          this.$router.push({ path: "/" });
+        } catch (e) {}
         // Todo implement backend strategy for nuxt auth
         // try {
         //   let response = await this.$auth.loginWith("local", {

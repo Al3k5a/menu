@@ -72,6 +72,11 @@ export default {
     baseURL: "",
   },
   auth: {
+    redirect: {
+      login: "/login",
+      logout: "/login",
+      home: false,
+    },
     strategies: {
       local: {},
     },

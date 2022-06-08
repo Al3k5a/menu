@@ -75,6 +75,9 @@ export default {
   methods: {
     async logout() {
       await this.$auth.logout();
+      try {
+        this.$router.push("/login");
+      } catch (err) {}
     },
     toggleDrawer() {
       this.drawer = !this.drawer;
